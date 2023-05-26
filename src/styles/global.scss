@@ -1,0 +1,48 @@
+@import "./flex.scss";
+@import "./theme.scss";
+@import 'uview-plus/theme.scss';
+@import "uview-plus/index.scss";
+
+// @font-face {
+// 	font-family: "customicons";
+// 	/* Project id 2878519 */
+// 	// src: url('/common/font/customicons.ttf') format('truetype');
+// }
+page {
+	width: 100%;
+	height: 100%;
+}
+::-webkit-scrollbar {
+	//去除滚动条
+		display: none;
+		width: 0;
+		height: 0;
+		color: transparent;
+	}
+
+.a-page {
+	width: 100%;
+	height: 100vh;
+}
+
+view,
+text,
+cover-view,
+image,
+navigator {
+	box-sizing: border-box;
+}
+.page {
+	width: 100%;
+	height: 100%;
+	background-color:$pageBgColor;
+}
+//单行内容超出部分省略号显示
+@mixin essipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@mixin btn{
+	background-color: $btnColor;
+}
